@@ -17,7 +17,7 @@
 
 // let price=document.getElementsByClassName("price");
 // for( var value of price){
-//     console.log(value.outerText);
+//     console.log(value.innerText);
 // }
 
 // let image=document.querySelectorAll(".img > img");
@@ -54,3 +54,13 @@ var addImage = function(){
 for (var i = 0; i < elements.length; i++){
     elements[i].addEventListener('click', addImage, false);
 }
+
+const productName = document.querySelectorAll('.body_product > .title');
+const textContent = productName.innerHTML;
+productName.innerHTML = 'Overalls For Kids';
+console.log(productName.innerHTML);
+
+var priceElem = document.querySelectorAll('.price > span');
+var priceElemContent = priceElem.innerHTML;
+priceElem.innerHTML = '&15';
+console.log(priceElem.innerHTML);
