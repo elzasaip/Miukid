@@ -5,3 +5,14 @@ function calculate(){
     alert("длина окружности: " + circumference);
 }
 calculate();
+
+function checkMin(a,b){
+    if (a<b){
+        return a;
+    }
+    else{
+        return b;
+    }
+}
+checkMin(34256,7640);
+
