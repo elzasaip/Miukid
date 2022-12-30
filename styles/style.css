@@ -382,11 +382,11 @@ button.search-form_btn {
     color:#9e9e9e;
     line-height: 2;
 }
-.btns .tm_list{
-    display: flex;
-    justify-content: space-evenly;
+.btns .item_icon{
+    display: inline-flex;
+    justify-content: space-between;
 }
-.btns li{
+.btns .item_icon{
     padding: 0;
 }
 
@@ -394,7 +394,7 @@ button.search-form_btn {
     transition: .5s;
 }
 
-.btns li:hover .icons{
+.btns .item_icon:hover .icons{
     background:#7cd0f5;
     color:white;
     cursor: pointer;
