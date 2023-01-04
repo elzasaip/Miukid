@@ -76,5 +76,27 @@
 // calcSumm();
 
 
+// 34 dz
+// Преобразуйте псевдо массив  в массив
+var object = {0: 'first', 1: 'second', 2: 'third', length: 3} 
+var array = [];
+
+for (var i = 0; i < object.length; i++) {
+    array.push(object[i]);
+}
+console.log(array);
+
+// 2-вариант
+var array = Array.from(object);
+console.log( array );
+
+
+// вывод [ "f", "i", "r", "s", "t" ], [ "s", "e", "c", "o", "n", "d" ] [ "t", "h", "i", "r", "d" ]
+let arr = ["first", "second", "third" ]; 
+for (let i = 0; i < arr.length; i++){
+    console.log(arr[i].split(''));
+}
+
+
 
 
