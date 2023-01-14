@@ -1,102 +1,28 @@
-// // 30 DZ
-// let radius = Number(prompt('Введите радиус:', '')); 
-// function calculate(){
-//     let pi = 3.14;
-//     let circumference = 2*pi*radius;
-//     alert("длина окружности: " + circumference);
-// }
-// calculate();
 
-// function checkMin(a,b){
-//     if (a<b){
-//         return a;
-//     }
-//     else{
-//         return b;
-//     }
-// }
-// checkMin(34256,7640);
+// 36 DZ
+let salary = {
+    almaz: 1200,
+    adilet: 1300,
+    nursultan: 3000,
+};
 
-// 31 DZ
+let bonus = {
+    almaz: 400,
+    adilet: 300,
+    nursultan: 200,
+};
 
-// Сделайте функцию которая возводить в степень числа вводимые пользователем
-// let num = Number(prompt('Введите число:', '')); 
-// let degree = Number(prompt('Введите число степени:', ''));
-// function calcDegree(){
-//     let result = num**degree;
-//     alerqwQt("степень числа: " + result);
-// }
-// calcDegree();
+let object = {};
 
-// Сделайте функцию которая находит площадь круга, радиус вводить пользователь.
-// let radius = Number(prompt('Введите радиус:', '')); 
-// function calculate(){
-//     let pi = 3.14;
-//     let circleArea = pi*radius**2;
-//     alert("площадь круга: " + circleArea);
-// }
-// calculate();
- 
-// Сделайте функцию которая находит площадь прямоугольника, длину и ширину вводить пользователь. 
+// Создаём цикл с массивом, в который вводим массивы, которые нужно сложить
+for(var i = 0, arrays = [salary, bonus]; i < arrays.length; i++){
+  for(key in arrays[i]){
+    if(object[key] == undefined){
+      object[key] = arrays[i][key];
+    }else{
+      object[key] = parseFloat(object[key]) + parseFloat(arrays[i][key]);
+    };
+  };
+};
 
-// function calcArea(a,b){
-//     let S = a*b;
-//     console.log("площадь прямоугольника: " + S);
-// }
-// calcArea(6,7);
-
-// let a = Number(prompt('Введите длину прямоугольника:', '')); 
-// let b = Number(prompt('Введите ширину прямоугольника:', ''));
-// function calcArea(){
-//     let S = a*b;
-//     alert("площадь прямоугольника: " + S);
-// }
-// calcArea();
-
-// 32 DZ
-// сделайте функцию которая суммируем два числа с плавающей точкой
-// пример: если пользователь  ввел 1.2, 1.2 вывод должен быть 2. 
-// let a = parseInt(prompt('Введите первое число:', '')); 
-// let b = parseInt(prompt('Введите второе число:', ''));
-// function calcSum(){
-//     let Summ = a+b;
-//     alert("сумма чисел: " + Summ);
-// }
-// calcSum();
-
-// // пример: если пользователь  ввел 2.5, 2.3 вывод должен быть 5
-// // пример: если пользователь  ввел 2,5, 2.7 вывод должен быть 5. 
-// // пример: если пользователь  ввел 2,5, 3,2 вывод должен быть 6.
-// let c = Number(prompt('Введите первое число:', '')); 
-// let d = Number(prompt('Введите второе число:', ''));
-// function calcSumm(){
-//     let Summ = c+d;
-//     alert(Summ.toFixed(0));
-// }
-// calcSumm();
-
-
-// 34 dz
-// Преобразуйте псевдо массив  в массив
-var object = {0: 'first', 1: 'second', 2: 'third', length: 3} 
-var array = [];
-
-for (var i = 0; i < object.length; i++) {
-    array.push(object[i]);
-}
-console.log(array);
-
-// 2-вариант
-var array = Array.from(object);
-console.log( array );
-
-
-// вывод [ "f", "i", "r", "s", "t" ], [ "s", "e", "c", "o", "n", "d" ] [ "t", "h", "i", "r", "d" ]
-let arr = ["first", "second", "third" ]; 
-for (let i = 0; i < arr.length; i++){
-    console.log(arr[i].split(''));
-}
-
-
-
-
+console.log(object);
