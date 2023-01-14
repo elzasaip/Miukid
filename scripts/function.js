@@ -20,9 +20,29 @@ for(var i = 0, arrays = [salary, bonus]; i < arrays.length; i++){
     if(object[key] == undefined){
       object[key] = arrays[i][key];
     }else{
-      object[key] = parseFloat(object[key]) + parseFloat(arrays[i][key]);
+      object[key] = parseInt(object[key]) + parseInt(arrays[i][key]);
     };
   };
 };
 
-console.log(object);
+// console.log(object);
+
+// 38 DZ
+// написать функцию которая запрашивает пользователю ввести число, 
+// функция должна проверять что ввел пользователь строку или тип число, 
+// при этом не конвертируя данные который ввел пользователь. 
+// если пользователь ввел тип чисто то преобразуйте это в шестнадцатеричный код, 
+// восьмеричный и двоичный код, 
+// если это не строка то на консоли выводится что это не строка.
+
+function checkInput(){
+    let inputNum = prompt('введите число', '');
+    // console.log(typeof (inputNum));
+    if(typeof inputNum == 'string'){
+        inputNum = Number(inputNum);
+        console.log(inputNum.toString(16), inputNum.toString(2), inputNum.toString(8));
+    } else {
+        console.log("это не строка.");
+    }
+}
+checkInput();
