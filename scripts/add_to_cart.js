@@ -34,8 +34,11 @@ let myFunction = function(event){
     // Удаление товара
 	deleteProduct();
 
-		//получить общее количество суммы товаров в корзине
+	//получить общее количество суммы товаров в корзине
     getTotalPrice();
+
+    // получить общее количество товаров в корзине
+    countProduct();
 };
 
 // event.preventDefault();  ----игнорировать "#"href
@@ -56,6 +59,7 @@ function deleteProduct(){
         this.parentNode.parentNode.remove();
 
         getTotalPrice();
+        countProduct();
     }
 }
 
@@ -72,4 +76,10 @@ function getTotalPrice() {
     document.getElementsByClassName('total_cart')[0].innerHTML = `$ ${total_price}`;
     document.querySelectorAll('.total_price .get_price')[0].innerHTML = `$ ${total_price}`;
     
+    
 }
+function countProduct(){
+    let count_product =document.getElementsByClassName('bag__item').length;
+    document.getElementsByClassName('cart_count')[0].innerHTML= count_product;
+}
+
