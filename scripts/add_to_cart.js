@@ -83,3 +83,20 @@ function countProduct(){
     document.getElementsByClassName('cart_count')[0].innerHTML= count_product;
 }
 
+const tabs={
+    list_tabs:[
+        "Лидеры продаж",
+        "Новинки",
+        "Распродажа"
+    ]
+};
+
+let create_ul = document.createElement('ul');
+
+tabs.list_tabs.forEach((item, i) => {
+    create_ul.innerHTML += `<li>${item}</li>`;
+});
+
+document.querySelector('.insert_listing').innerHTML +=create_ul.outerHTML;
+
+console.log(create_ul);
