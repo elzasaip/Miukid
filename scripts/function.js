@@ -36,13 +36,39 @@ for(var i = 0, arrays = [salary, bonus]; i < arrays.length; i++){
 // если это не строка то на консоли выводится что это не строка.
 
 function checkInput(){
-    let inputNum = prompt('введите число', '');
+    // let inputNum = prompt('введите число', '');
     // console.log(typeof (inputNum));
     if(typeof inputNum == 'string'){
         inputNum = Number(inputNum);
-        console.log(inputNum.toString(16), inputNum.toString(2), inputNum.toString(8));
+        // console.log(inputNum.toString(16), inputNum.toString(2), inputNum.toString(8));
     } else {
-        console.log("это не строка.");
+        // console.log("это не строка.");
     }
 }
 checkInput();
+
+
+// 43 urok
+// console.log(document.querySelector('.insert_listing').nextSibling);
+for(let noneText of document.body.childNodes){
+  if (noneText == '#text'){
+    continue;
+  }
+  // console.log(noneText.nodeName);
+}
+
+// 44 DZ
+
+function createUser(name, birthOfYear,birthPlace){
+    this.name = name;
+    this.birthOfYear = birthOfYear;
+    this.birthPlace = birthPlace;
+    this.getInfo= function(){
+      console.log([this.name, this.birthOfYear, this.birthPlace].join(','));
+    };
+}
+let amantur= new createUser( "Amantur", 1997, "Bishkek");
+amantur.getInfo();
+
+let adilet = new createUser('Adilet', 1995, 'Tokmok');
+adilet.getInfo();

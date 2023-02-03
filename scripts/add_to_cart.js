@@ -99,4 +99,4 @@ tabs.list_tabs.forEach((item, i) => {
 
 document.querySelector('.insert_listing').innerHTML +=create_ul.outerHTML;
 
-console.log(create_ul);
+// console.log(create_ul);
