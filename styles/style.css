@@ -450,6 +450,7 @@ button.search-form_btn {
     font-weight: bold;
     color: #4c4b6c;
     margin-bottom: 5px;
+    text-decoration: none;
 }
 /* вверхние tooltips */
 .tooltip{
@@ -464,29 +465,47 @@ button.search-form_btn {
     opacity: 1;
     z-index: 1;
 }
-.bg_triangle_green{
+.bg_green::before{
+    content: "";
+    top: 23px;
+    left: 8px;
     width: 0;
     height: 0;
-    border-left: 1px solid transparent;
-    border-right: 7px solid transparent;
-    border-top: 12px solid rgb(102, 255, 47);
+    border-right: 8px solid transparent;
+    border-top: 12px solid #abcd02;
     position: absolute;
-    right: 25px;
 }
-.bg_triangle_orange{
+.bg_orange::before{
+    content: "";
+    top: 23px;
+    left: 8px;
     width: 0;
     height: 0;
-    border-left: 1px solid transparent;
-    border-right: 7px solid transparent;
-    border-top: 12px solid #ffcc33;
+    border-right: 8px solid transparent;
+    border-top: 12px solid #fdc140;
     position: absolute;
-    right: 25px;
 }
 .bg_orange{
-    background-color: #ffcc33;
+    background-color: #fdc140;
 }
 .bg_green{
-    background-color: rgb(102, 255, 47);
+    background-color: #abcd02;
+}
+
+.arrows {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: rgb(54, 54, 54);
+    font-size: 12px;
+    opacity: 0;
+    visibility: hidden;
+    cursor: pointer;
+}
+
+.product:hover .arrows {
+    opacity: 1;
+    visibility: visible;
 }
 /* Banners */
 

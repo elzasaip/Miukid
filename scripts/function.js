@@ -1,110 +1,132 @@
+(function(){
+  'use strict';
 
-// 36 DZ
-let salary = {
-    almaz: 1200,
-    adilet: 1300,
-    nursultan: 3000,
-};
+    // 46 Urok
+    class cardProduct{
+      constructor(tooltips,tooltipClass, img, title, originPrice, oldPrice, innerBlock){
+        this.tooltips=tooltips;
+        this.tooltipClass=tooltipClass;
+        this.img=img;
+        this.title=title;
+        this.originPrice=originPrice;
+        this.oldPrice=oldPrice;
+        this.innerBlock=document.querySelector(innerBlock);
+        this.rate =85;
+        this.originPrice=this.convertToUSD(this.originPrice);
+        this.oldPrice=this.convertToUSD(this.oldPrice); 
+      }
 
-let bonus = {
-    almaz: 400,
-    adilet: 300,
-    nursultan: 200,
-};
 
-let object = {};
+      convertToUSD(price){
+        const result = price / this.rate;
+        return result.toFixed(2);
+      }
 
-// Создаём цикл с массивом, в который вводим массивы, которые нужно сложить
-for(var i = 0, arrays = [salary, bonus]; i < arrays.length; i++){
-  for(key in arrays[i]){
-    if(object[key] == undefined){
-      object[key] = arrays[i][key];
-    }else{
-      object[key] = parseInt(object[key]) + parseInt(arrays[i][key]);
-    };
-  };
-};
-
-// console.log(object);
-
-// 38 DZ
-// написать функцию которая запрашивает пользователю ввести число, 
-// функция должна проверять что ввел пользователь строку или тип число, 
-// при этом не конвертируя данные который ввел пользователь. 
-// если пользователь ввел тип чисто то преобразуйте это в шестнадцатеричный код, 
-// восьмеричный и двоичный код, 
-// если это не строка то на консоли выводится что это не строка.
-
-function checkInput(){
-    // let inputNum = prompt('введите число', '');
-    // console.log(typeof (inputNum));
-    if(typeof inputNum == 'string'){
-        inputNum = Number(inputNum);
-        // console.log(inputNum.toString(16), inputNum.toString(2), inputNum.toString(8));
-    } else {
-        // console.log("это не строка.");
+      render(){
+        const div=document.createElement("div");
+        div.classList.add("product");
+        div.innerHTML=`
+                              <div class="img">
+                                  <div class="tooltip ${this.tooltipClass}">
+                                      <span>${this.tooltips}</span>
+                                  </div>
+                                  <img src=${this.img} alt="kurtka.jpeg">
+                                  <div class="arrows">
+                                      <span><i class="fas fa-arrows-alt"></i>Quick view</span>
+                                  </div>
+                              </div>
+                              <div class="body_product">
+                                  <a href="?search=#" class="title">${this.title}</a>
+                                  <div class="block_reviews">
+                                      <div class="stars">
+                                          <i class="fa-solid fa-star"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                          <i class="fa-solid fa-star"></i>
+                                      </div>
+                                      <div class="reviews">
+                                          <span>6 review(s)</span>
+                                      </div>
+                                  </div>
+                                  <div class="price">
+                                      <span class="currency">$</span>
+                                      <span class="prod_price">${this.originPrice}</span>
+                                      <del>$ ${this.oldPrice}</del>
+                                  </div>
+                                  <div class="btns hidden_btns">
+                                      <div class="item_icon">
+                                          <a class="icons add_cart" href="#">
+                                              <i class="fa-solid fa-basket-shopping"></i>
+                                          </a>
+                                      </div>
+                                      <div class="item_icon">
+                                          <a class="icons" href="#">
+                                              <i class="fa-solid fa-scale-balanced"></i>
+                                          </a>
+                                      </div>
+                                      <div class="item_icon">
+                                          <a class="icons" href="#">
+                                              <i class="fa-solid fa-heart"></i>
+                                          </a>
+                                      </div>
+                                  </div>
+                              </div>
+                          `;
+          this.innerBlock.append(div);
+      }
     }
-}
-checkInput();
+    new cardProduct(
+    'NEW',
+    'bg_green',
+    'images/body_img/kurtka.jpeg',
+    'Blue Sweartshirt',
+    1230,
+    2500,
+    '.list_product'
+    ).render();
+
+    new cardProduct(
+    '-25%',
+    'bg_orange',
+    'images/body_img/Sweatshirt.jpeg',
+    'Sweartshirt for girl',
+    1500,
+    2750,
+    '.list_product'
+    ).render();
+
+    new cardProduct(
+    '',
+    '',
+    'images/body_img/kurtka_for_girl.jpeg',
+    'Pink Sweartshirt',
+    2500,
+    3125,
+    '.list_product'
+    ).render();
+
+    new cardProduct(
+    '',
+    '',
+    'images/body_img/backpack.jpeg',
+    'Backpack with Animal',
+    1400,
+    1900,
+    '.list_product'
+    ).render();
+
+    new cardProduct(
+    'NEW',
+    'bg_green',
+    'images/body_img/pants.jpeg',
+    'Winter Pants',
+    1300,
+    1750,
+    '.list_product'
+    ).render();
 
 
-// 43 urok
-// console.log(document.querySelector('.insert_listing').nextSibling);
-for(let noneText of document.body.childNodes){
-  if (noneText == '#text'){
-    continue;
-  }
-  // console.log(noneText.nodeName);
-}
 
-// 44 DZ
 
-function createUser(name, birthOfYear,birthPlace){
-    this.name = name;
-    this.birthOfYear = birthOfYear;
-    this.birthPlace = birthPlace;
-    this.getInfo= function(){
-      // console.log([this.name, this.birthOfYear, this.birthPlace].join(','));
-    };
-}
-let amantur= new createUser( "Amantur", 1997, "Bishkek");
-amantur.getInfo();
-
-let adilet = new createUser('Adilet', 1995, 'Tokmok');
-adilet.getInfo();
-
-// 45 DZ
-// Реализуйте класс Student (Студент), который будет наследовать от класса User, 
-// подобно тому, как это сделано в теоретической части урока. Этот класс должен иметь следующие 
-// свойства: name (имя, наследуется от User), surname (фамилия, наследуется от User), 
-// year (год поступления в вуз). Класс должен иметь метод getFullName() (наследуется от User), 
-// с помощью которого можно вывести одновременно имя и фамилию студента. Также класс должен иметь
-// метод getCourse(), который будет выводить текущий курс студента (от 1 до 5). 
-// Курс вычисляется так: нужно от текущего года отнять год поступления в вуз. 
-// Текущий год получите самостоятельно.
-
-class User{
-  constructor(name,surname){
-    this.name=name;
-    this.surname=surname;
-  }
-  getFullName(){
-    console.log(this.name, this.surname);
-  }
-}
-
-class Student extends User{
-  constructor (name,surname,yearOfAdmission,currentYear){
-    super(name,surname);
-    this.yearOfAdmission = yearOfAdmission;
-    this.currentYear=currentYear;
-
-  }
-  getCourse(){
-    let grade = this.currentYear-this.yearOfAdmission;
-    return grade;
-  }
-}
-const student = new Student('Alisa','John',2020,2023);
-student.getFullName();
-console.log("Учиться на "+ student.getCourse()+" курсе");
+}());
