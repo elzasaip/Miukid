@@ -61,4 +61,27 @@ for(let noneText of document.body.childNodes){
   const student = new Student('Alisa','John',2020,2023);
   student.getFullName();
   // console.log("Учиться на "+ student.getCourse()+" курсе");
+
+
+  // 48 DZ
+  // Создайте литеральный объект 
+  // Преобразуйте этот объект в строковые данные с помощью json 
+  // Полученные строковые данные обратно преобразуйте в объект 
+
+  const car ={
+    model:'Toyota Camry',
+    year:2020,
+    color:'red',
+    engine:{ cylinders: 4, size: 2.2 },
+  };
+   let auto=JSON.stringify(car);
+   console.log(auto);
+   console.log(JSON.parse(auto));
+
+
+
+
+
+
 }());
+
