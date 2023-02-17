@@ -61,4 +61,37 @@ for(let noneText of document.body.childNodes){
   const student = new Student('Alisa','John',2020,2023);
   student.getFullName();
   // console.log("Учиться на "+ student.getCourse()+" курсе");
-}());
+
+
+  // 49 DZ
+  const inputSom = document.querySelector("#som");
+  const inputUsd = document.querySelector("#usd");
+
+
+  inputSom.addEventListener('input',() =>{
+
+      const request = new XMLHttpRequest();
+      request.open("GET", "current.json");
+      //       request.open(method(GET/POST),url, login,password)
+      request.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+      request.send();
+
+      request.addEventListener('load',()=> {
+          
+        if(request.status === 200){
+          console.log(request.response);
+           
+          const currency= JSON.parse(request.response);
+
+          const result = inputSom.value/currency.current.usd;
+          
+          inputUsd.value= (result).toFixed(2);
+        
+        }else{
+          inputUsd.value = "Ошибка";
+        }
+
+      });
+
+  });
+}())
