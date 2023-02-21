@@ -78,9 +78,42 @@ for(let noneText of document.body.childNodes){
    console.log(auto);
    console.log(JSON.parse(auto));
 
+// 52 DZ
 
+// Сделать функцию которая конвертирует строку в тип массив
+// input: ‘alex’, ‘denis’, ‘victory’
+// output: [‘alex’, ‘denis’, ‘victory’];
 
+const arr=[];
 
+function convertToArr(item){
+  if (typeof  item=='string'){
+    arr.push(item);
+  }
+}
+
+convertToArr('alex');
+convertToArr('denis');
+convertToArr('victory');
+
+console.log(arr);
+
+// сделать функцию которая получает числовые значения в виде строки 
+// и их конвертирует в массив и потом найти общую сумму с помощью reduce метода
+// input: ‘1’, ‘2’, ‘3’
+// output: 6
+
+const newArr =[];
+function convertNumToArr(item){
+    newArr.push(item); 
+}
+convertNumToArr('1');
+convertNumToArr('2');
+convertNumToArr('3');
+console.log(newArr);
+
+const result =newArr.reduce((count,item) => count + Number.parseInt(item),0);
+console.log(result);
 
 
 }());
