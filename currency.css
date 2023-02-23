@@ -1,0 +1,12 @@
+body{
+    margin:auto;
+    padding: auto;
+}
+
+.col {
+    display: inline-block;
+}
+
+select {
+    width: 147px;
+}
