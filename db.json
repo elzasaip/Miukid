@@ -34,10 +34,19 @@
             "title": "Winter Pants",
             "originPrice": 1300,
             "oldPrice":    1750
+        },
+
+        {
+            "tooltips": "NEW",
+            "tooltipClass": "bg_green",
+            "img":"images/body_img/kurtka_for_girl.jpeg",
+            "title": "Jacket for girls",
+            "originPrice": 2500,
+            "oldPrice":    2050
         }
     ],
 
-    "request":[
+    "requests":[
         
     ]
 }
