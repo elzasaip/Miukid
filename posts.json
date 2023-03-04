@@ -1,0 +1,41 @@
+{
+    "posts":[
+        {
+            "postId":1,
+            "title":"Как создать JSON файл.",
+            "body":"Создать простой текстовый документ, вставить туда нужный код JSON данных и поменять расширение файла на *.json.",
+            "site":"https://webkyrs.info"
+        },
+
+        {
+            "postId":2,
+            "title":"Developer",
+            "body":"A software developer is a person or company engaged in a software development process, including research, design, programming, testing, and other facets of creating computer software.",
+            "site":"https://en.wikipedia.org"
+        },
+
+        {
+            "postId":3,
+            "title":"Web Browsers",
+            "body":"A web browser is software used to retrieve, present, and traverse information on the WWW. Typically, browsers run on a desktop or laptop computer, tablet, or phone, but as of late a browser can be found on just about anything (i.e, on a fridge, in cars, etc.).",
+            "site":"https://frontendmasters.com"
+        },
+
+        {
+            "postId":4,
+            "title":"Python",
+            "body":"Python is an interpreted, object-oriented, high-level programming language with dynamic semantics. Its high-level built in data structures, combined with dynamic typing and dynamic binding, make it very attractive for Rapid Application Development, as well as for use as a scripting or glue language to connect existing components together.",
+            "site":"https://www.python.org"
+        },
+
+        {
+            "postId":5,
+            "title":"JavaScript",
+            "body":"JavaScript is a scripting or programming language that allows you to implement complex features on web pages — every time a web page does more than just sit there and display static information for you to look at — displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes, etc. — you can bet that JavaScript is probably involved. It is the third layer of the layer cake of standard web technologies, two of which (HTML and CSS) we have covered in much more detail in other parts of the Learning Area.",
+            "site":"https://developer.mozilla.org"
+        }
+
+    ]
+        
+    
+}

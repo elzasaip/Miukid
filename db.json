@@ -1,52 +1,95 @@
 {
-    "products":[
-        {
-            "tooltips": "NEW",
-            "tooltipClass": "bg_green",
-            "img":"images/body_img/kurtka.jpeg",
-            "title": "Blue Sweartshirt",
-            "originPrice": 1230,
-            "oldPrice":    2500
-        },
-
-        {
-            "tooltips": "-25%",
-            "tooltipClass": "bg_orange",
-            "img":"images/body_img/Sweatshirt.jpeg",
-            "title": "Sweartshirt for girl",
-            "originPrice": 1500,
-            "oldPrice":    2700
-        },
-
-        {
-            "tooltips": "Sale",
-            "tooltipClass": "bg_orange",
-            "img":"images/body_img/backpack.jpeg",
-            "title": "Backpack with Animal",
-            "originPrice": 1400,
-            "oldPrice":    1900
-        },
-
-        {
-            "tooltips": "NEW",
-            "tooltipClass": "bg_green",
-            "img":"images/body_img/pants.jpeg",
-            "title": "Winter Pants",
-            "originPrice": 1300,
-            "oldPrice":    1750
-        },
-
-        {
-            "tooltips": "NEW",
-            "tooltipClass": "bg_green",
-            "img":"images/body_img/kurtka_for_girl.jpeg",
-            "title": "Jacket for girls",
-            "originPrice": 2500,
-            "oldPrice":    2050
-        }
-    ],
-
-    "requests":[
-        
-    ]
+  "products": [
+    {
+      "tooltips": "NEW",
+      "tooltipClass": "bg_green",
+      "img": "images/body_img/kurtka.jpeg",
+      "title": "Blue Sweartshirt",
+      "originPrice": 1230,
+      "oldPrice": 2500
+    },
+    {
+      "tooltips": "-25%",
+      "tooltipClass": "bg_orange",
+      "img": "images/body_img/Sweatshirt.jpeg",
+      "title": "Sweartshirt for girl",
+      "originPrice": 1500,
+      "oldPrice": 2700
+    },
+    {
+      "tooltips": "Sale",
+      "tooltipClass": "bg_orange",
+      "img": "images/body_img/backpack.jpeg",
+      "title": "Backpack with Animal",
+      "originPrice": 1400,
+      "oldPrice": 1900
+    },
+    {
+      "tooltips": "NEW",
+      "tooltipClass": "bg_green",
+      "img": "images/body_img/pants.jpeg",
+      "title": "Winter Pants",
+      "originPrice": 1300,
+      "oldPrice": 1750
+    },
+    {
+      "tooltips": "NEW",
+      "tooltipClass": "bg_green",
+      "img": "images/body_img/kurtka_for_girl.jpeg",
+      "title": "Jacket for girls",
+      "originPrice": 2500,
+      "oldPrice": 2050
+    }
+  ],
+  "requests": [
+    {
+      "ttl": "Blue Sweartshirt",
+      "image": "http://127.0.0.1:5500/images/body_img/kurtka.jpeg",
+      "price": "14.47",
+      "oldPrc": "$ 29.41",
+      "id": 1
+    },
+    {
+      "ttl": "Sweartshirt for girl",
+      "image": "http://127.0.0.1:5500/images/body_img/Sweatshirt.jpeg",
+      "price": "17.65",
+      "oldPrc": "$ 31.76",
+      "id": 2
+    },
+    {
+      "ttl": "Backpack with Animal",
+      "image": "http://127.0.0.1:5500/images/body_img/backpack.jpeg",
+      "price": "16.47",
+      "oldPrc": "$ 22.35",
+      "id": 3
+    },
+    {
+      "ttl": "Blue Sweartshirt",
+      "image": "http://127.0.0.1:5500/images/body_img/kurtka.jpeg",
+      "price": "14.47",
+      "oldPrc": "$ 29.41",
+      "id": 4
+    },
+    {
+      "ttl": "Blue Sweartshirt",
+      "image": "http://127.0.0.1:5500/images/body_img/kurtka.jpeg",
+      "price": "14.47",
+      "oldPrc": "$ 29.41",
+      "id": 5
+    },
+    {
+      "ttl": "Blue Sweartshirt",
+      "image": "http://127.0.0.1:5500/images/body_img/kurtka.jpeg",
+      "price": "14.47",
+      "oldPrc": "$ 29.41",
+      "id": 6
+    },
+    {
+      "ttl": "Sweartshirt for girl",
+      "image": "http://127.0.0.1:5500/images/body_img/Sweatshirt.jpeg",
+      "price": "17.65",
+      "oldPrc": "$ 31.76",
+      "id": 7
+    }
+  ]
 }

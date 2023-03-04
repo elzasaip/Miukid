@@ -1,13 +1,10 @@
 
-// 33 Urok Добавление товара в корзину
-let elements = document.getElementsByClassName("add_cart");
-
-let myFunction = function(event){
-    event.preventDefault();
-    let title = this.parentNode.parentNode.parentNode.querySelectorAll(".title");
-    let price = this.parentNode.parentNode.parentNode.querySelectorAll('.price .prod_price');
-    let delPrice = this.parentNode.parentNode.parentNode.querySelectorAll('.price > del');
-    let image= this.parentNode.parentNode.parentNode.parentNode.querySelectorAll(".img > img");
+// 57 Urok Добавление товара в корзину
+let myFunction = function(ttl, prc, delPrc, img){
+    let title = ttl;
+    let price = prc;
+    let delPrice = delPrc;
+    let image= img;
 
     let create_li= document.createElement('li');
     create_li.classList.add("bag__item");
@@ -39,13 +36,37 @@ let myFunction = function(event){
 
     // получить общее количество товаров в корзине
     countProduct();
+
+    fetch("http://localhost:3000/requests",{
+        method: "POST",
+        headers:{
+            "Content-type": "Application/json"
+        },
+        body: JSON.stringify({
+            "ttl":title[0].innerText,
+            "image":image[0].src,
+            "price":price[0].innerText,
+            "oldPrc":delPrice[0].innerText
+        })
+
+    });
+    
 };
 
 // event.preventDefault();  ----игнорировать "#"href
-for (var i=0; i<elements.length; i++){
-    elements[i].addEventListener('click', myFunction, false);
-}
-
+// for (var i=0; i<elements.length; i++){
+//     elements[i].addEventListener('click', myFunction, false);
+// }
+document.querySelector(".list_product").addEventListener("click", event =>{
+    console.log(event);
+    if(event.target.parentNode.parentNode.classList.contains("product")) return false;
+    let ttl = event.target.parentNode.parentNode.parentNode.parentNode.querySelectorAll(".title");
+    let price = event.target.parentNode.parentNode.parentNode.parentNode.querySelectorAll('.price .prod_price');
+    let delPrc = event.target.parentNode.parentNode.parentNode.parentNode.querySelectorAll('.price > del');
+    let img= event.target.parentNode.parentNode.parentNode.parentNode.parentNode.querySelectorAll(".img > img");
+    myFunction(ttl, price, delPrc,img);
+    
+});
 
 function deleteProduct(){
     let click_trash = document.querySelectorAll(".del_icon");
@@ -56,7 +77,7 @@ function deleteProduct(){
 
     function delFromCart(event){
         event.preventDefault();
-        this.parentNode.parentNode.remove();
+        this.parentNode.remove();
 
         getTotalPrice();
         countProduct();
