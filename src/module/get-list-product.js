@@ -1,12 +1,5 @@
-(function(){
+
     'use strict';
-      // fetch("http://localhost:3000/posts")
-      // .then(data => data.json())
-      // .then(res  => console.log(res));
-
-      // axios.get("http://localhost:3000/products")
-      // .then(data  => console.log(data));
-
       class cardProduct{
         constructor(tooltips,tooltipClass, img, title, originPrice, oldPrice, innerBlock){
           this.tooltips=tooltips;
@@ -107,6 +100,3 @@
           ).render();
         });
       });
-
-  
-}());

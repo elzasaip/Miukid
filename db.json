@@ -90,6 +90,48 @@
       "price": "17.65",
       "oldPrc": "$ 31.76",
       "id": 7
+    },
+    {
+      "ttl": "Blue Sweartshirt",
+      "image": "http://127.0.0.1:5500/images/body_img/kurtka.jpeg",
+      "price": "14.47",
+      "oldPrc": "$ 29.41",
+      "id": 8
+    },
+    {
+      "ttl": "Sweartshirt for girl",
+      "image": "http://127.0.0.1:5500/images/body_img/Sweatshirt.jpeg",
+      "price": "17.65",
+      "oldPrc": "$ 31.76",
+      "id": 9
+    },
+    {
+      "ttl": "Backpack with Animal",
+      "image": "http://127.0.0.1:5500/images/body_img/kurtka.jpeg",
+      "price": "16.47",
+      "oldPrc": "$ 22.35",
+      "id": 10
+    },
+    {
+      "ttl": "Blue Sweartshirt",
+      "image": "http://127.0.0.1:5500/images/body_img/kurtka.jpeg",
+      "price": "14.47",
+      "oldPrc": "$ 29.41",
+      "id": 11
+    },
+    {
+      "ttl": "Blue Sweartshirt",
+      "image": "http://127.0.0.1:5500/images/body_img/kurtka.jpeg",
+      "price": "14.47",
+      "oldPrc": "$ 29.41",
+      "id": 12
+    },
+    {
+      "ttl": "Blue Sweartshirt",
+      "image": "http://127.0.0.1:5500/images/body_img/kurtka.jpeg",
+      "price": "14.47",
+      "oldPrc": "$ 29.41",
+      "id": 13
     }
   ]
 }
